@@ -1,0 +1,341 @@
+<?php
+
+include_once('l10_theme.features.inc');
+
+function l10_theme_context_default_contexts() {
+  $items[] = array(
+    'namespace' => 'context_ui',
+    'attribute' => 'section',
+    'value' => 'blogs',
+    'system' => 0,
+    'description' => '',
+    'views' => array(
+      '0' => 'l10_blog',
+    ),
+    'block' => array(
+      'views_l10_bios-block_1' => (object) (array(
+         'module' => 'views',
+         'delta' => 'l10_bios-block_1',
+         'weight' => 25,
+         'region' => 'left',
+         'status' => '0',
+         'label' => '[view] Bios List',
+         'type' => 'context_ui',
+         'bid' => 'views_l10_bios-block_1',
+      )),
+      'views_l10_news-block_1' => (object) (array(
+         'module' => 'views',
+         'delta' => 'l10_news-block_1',
+         'weight' => 25,
+         'region' => 'right',
+         'status' => '0',
+         'label' => '[view] Latest News',
+         'type' => 'context_ui',
+         'bid' => 'views_l10_news-block_1',
+      )),
+      'views_l10_blog-block_4' => (object) (array(
+         'module' => 'views',
+         'delta' => 'l10_blog-block_4',
+         'weight' => 26,
+         'region' => 'right',
+         'status' => '0',
+         'label' => '[view] Blog Archive',
+         'type' => 'context_ui',
+         'bid' => 'views_l10_blog-block_4',
+      )),
+    ),
+    'type' => 1,
+    'status' => 1,
+  );
+
+  $items[] = array(
+    'namespace' => 'context_ui',
+    'attribute' => 'section',
+    'value' => 'blog_posts',
+    'system' => 0,
+    'description' => 'Context for blog posts',
+    'node' => array(
+      '0' => 'blog',
+    ),
+    'block' => array(
+      'views_l10_bios-block_1' => (object) (array(
+         'module' => 'views',
+         'delta' => 'l10_bios-block_1',
+         'weight' => 25,
+         'region' => 'left',
+         'status' => '0',
+         'label' => '[view] Bios List',
+         'type' => 'context_ui',
+         'bid' => 'views_l10_bios-block_1',
+      )),
+      'views_l10_blog-block_1' => (object) (array(
+         'module' => 'views',
+         'delta' => 'l10_blog-block_1',
+         'weight' => 25,
+         'region' => 'right',
+         'status' => '0',
+         'label' => '[view] Blog Listing',
+         'type' => 'context_ui',
+         'bid' => 'views_l10_blog-block_1',
+      )),
+      'views_l10_blog-block_4' => (object) (array(
+         'module' => 'views',
+         'delta' => 'l10_blog-block_4',
+         'weight' => 26,
+         'region' => 'right',
+         'status' => '0',
+         'label' => '[view] Blog Archive',
+         'type' => 'context_ui',
+         'bid' => 'views_l10_blog-block_4',
+      )),
+    ),
+    'type' => 1,
+    'status' => 1,
+  );
+
+  $items[] = array(
+    'namespace' => 'fserver',
+    'attribute' => 'section',
+    'value' => 'project',
+    'description' => '',
+    'node' => array(
+      '0' => 'fserver_project',
+    ),
+    'block' => array(
+      'views_fserver_releases-block_1' => array(
+        'module' => 'views',
+        'delta' => 'fserver_releases-block_1',
+        'weight' => 20,
+        'region' => 'content',
+        'status' => '0',
+        'label' => 'fserver_releases: Block',
+        'type' => 'context_ui',
+      ),
+    ),
+    'type' => 0,
+    'status' => 1,
+  );
+
+  $items[] = array(
+    'namespace' => 'context_ui',
+    'attribute' => 'section',
+    'value' => 'about_us',
+    'system' => 0,
+    'description' => '',
+    'path' => array(
+      'node/33' => 'node/33',
+    ),
+    'block' => array(
+      'views_l10_bios-block_1' => (object) (array(
+         'module' => 'views',
+         'delta' => 'l10_bios-block_1',
+         'weight' => 25,
+         'region' => 'left',
+         'status' => '0',
+         'label' => '[view] Bios List',
+         'type' => 'context_ui',
+         'bid' => 'views_l10_bios-block_1',
+      )),
+      'views_l10_news-block_1' => (object) (array(
+         'module' => 'views',
+         'delta' => 'l10_news-block_1',
+         'weight' => 25,
+         'region' => 'right',
+         'status' => '0',
+         'label' => '[view] Latest News',
+         'type' => 'context_ui',
+         'bid' => 'views_l10_news-block_1',
+      )),
+      'views_l10_blog-block_1' => (object) (array(
+         'module' => 'views',
+         'delta' => 'l10_blog-block_1',
+         'weight' => 26,
+         'region' => 'right',
+         'status' => '0',
+         'label' => '[view] Blog Listing',
+         'type' => 'context_ui',
+         'bid' => 'views_l10_blog-block_1',
+      )),
+    ),
+    'type' => 2,
+    'status' => 1,
+  );
+
+  $items[] = array(
+    'namespace' => 'context_ui',
+    'attribute' => 'section',
+    'value' => 'events',
+    'system' => 0,
+    'description' => '',
+    'node' => array(
+      '0' => 'l10_event',
+    ),
+    'path' => array(
+      'calendar' => 'calendar',
+    ),
+    'block' => array(
+      'views_l10_bios-block_1' => (object) (array(
+         'module' => 'views',
+         'delta' => 'l10_bios-block_1',
+         'weight' => 25,
+         'region' => 'left',
+         'status' => '0',
+         'label' => '[view] Bios List',
+         'type' => 'context_ui',
+         'bid' => 'views_l10_bios-block_1',
+      )),
+      'views_l10_news-block_1' => (object) (array(
+         'module' => 'views',
+         'delta' => 'l10_news-block_1',
+         'weight' => 25,
+         'region' => 'right',
+         'status' => '0',
+         'label' => '[view] Latest News',
+         'type' => 'context_ui',
+         'bid' => 'views_l10_news-block_1',
+      )),
+      'views_l10_blog-block_1' => (object) (array(
+         'module' => 'views',
+         'delta' => 'l10_blog-block_1',
+         'weight' => 26,
+         'region' => 'right',
+         'status' => '0',
+         'label' => '[view] Blog Listing',
+         'type' => 'context_ui',
+         'bid' => 'views_l10_blog-block_1',
+      )),
+    ),
+    'type' => 2,
+    'status' => 1,
+  );
+
+  $items[] = array(
+    'namespace' => 'context_ui',
+    'attribute' => 'section',
+    'value' => 'home',
+    'system' => 0,
+    'description' => '',
+    'path' => array(
+      'node/35' => 'node/35',
+    ),
+    'block' => array(
+      'views_l10_bios-block_1' => (object) (array(
+         'module' => 'views',
+         'delta' => 'l10_bios-block_1',
+         'weight' => 25,
+         'region' => 'left',
+         'status' => '0',
+         'label' => '[views] Bios List',
+         'type' => 'context_ui',
+         'bid' => 'views_l10_bios-block_1',
+      )),
+      'views_l10_news-block_1' => (object) (array(
+         'module' => 'views',
+         'delta' => 'l10_news-block_1',
+         'weight' => 25,
+         'region' => 'right',
+         'status' => '0',
+         'label' => '[views] Latest News',
+         'type' => 'context_ui',
+         'bid' => 'views_l10_news-block_1',
+      )),
+      'views_l10_blog-block_1' => (object) (array(
+         'module' => 'views',
+         'delta' => 'l10_blog-block_1',
+         'weight' => 26,
+         'region' => 'right',
+         'status' => '0',
+         'label' => '[views] Blog Listing',
+         'type' => 'context_ui',
+         'bid' => 'views_l10_blog-block_1',
+      )),
+    ),
+    'type' => 2,
+    'status' => 1,
+  );
+
+  $items[] = array(
+    'namespace' => 'context_ui',
+    'attribute' => 'section',
+    'value' => 'offerings',
+    'system' => 0,
+    'description' => '',
+    'path' => array(
+      'node/36' => 'node/36',
+    ),
+    'block' => array(
+      'views_l10_bios-block_1' => (object) (array(
+         'module' => 'views',
+         'delta' => 'l10_bios-block_1',
+         'weight' => 25,
+         'region' => 'left',
+         'status' => '0',
+         'label' => '[view] Bios List',
+         'type' => 'context_ui',
+         'bid' => 'views_l10_bios-block_1',
+      )),
+      'views_l10_news-block_1' => (object) (array(
+         'module' => 'views',
+         'delta' => 'l10_news-block_1',
+         'weight' => 25,
+         'region' => 'right',
+         'status' => '0',
+         'label' => '[view] Latest News',
+         'type' => 'context_ui',
+         'bid' => 'views_l10_news-block_1',
+      )),
+      'views_l10_blog-block_1' => (object) (array(
+         'module' => 'views',
+         'delta' => 'l10_blog-block_1',
+         'weight' => 26,
+         'region' => 'right',
+         'status' => '0',
+         'label' => '[view] Blog Listing',
+         'type' => 'context_ui',
+         'bid' => 'views_l10_blog-block_1',
+      )),
+    ),
+    'type' => 2,
+    'status' => 1,
+  );
+
+  $items[] = array(
+    'namespace' => 'context_ui',
+    'attribute' => 'section',
+    'value' => 'staff',
+    'system' => 0,
+    'description' => '',
+    'node' => array(
+      '0' => 'l10_bio',
+    ),
+    'path' => array(
+      'bios' => 'bios',
+    ),
+    'block' => array(
+      'views_l10_news-block_1' => (object) (array(
+         'module' => 'views',
+         'delta' => 'l10_news-block_1',
+         'weight' => 25,
+         'region' => 'right',
+         'status' => '0',
+         'label' => '[view] Latest News',
+         'type' => 'context_ui',
+         'bid' => 'views_l10_news-block_1',
+      )),
+      'views_l10_blog-block_1' => (object) (array(
+         'module' => 'views',
+         'delta' => 'l10_blog-block_1',
+         'weight' => 26,
+         'region' => 'right',
+         'status' => '0',
+         'label' => '[view] Blog Listing',
+         'type' => 'context_ui',
+         'bid' => 'views_l10_blog-block_1',
+      )),
+    ),
+    'type' => 2,
+    'status' => 1,
+  );
+
+  return $items;
+}

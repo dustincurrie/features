@@ -1,0 +1,13 @@
+<?php
+
+include_once('l10_bios.features.inc');
+
+function l10_bios_enable() {
+  $path = drupal_get_path('module', 'l10_bios') . '/includes/';
+  $file = 'bios.queue';
+  if (file_exists($path . $file)) {
+    $queue_code = file_get_contents($path . $file);  
+    $form_state = eval('return '. $queue_code .';');
+    drupal_execute('nodequeue_edit_queue_form', $form_state, 'nodequeue');
+  } 
+}

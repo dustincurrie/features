@@ -1,0 +1,3 @@
+<?php
+
+include_once('l10_boxes.features.inc');
